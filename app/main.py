@@ -6,6 +6,8 @@ def copy_file(command: str) -> None:
         return
     file_to_copy = list_of_command[1]
     destination_file = list_of_command[2]
+    if list_of_command[0] != "cp":
+        return
     if command != str(f"cp {file_to_copy} {destination_file}"):
         return
     if file_to_copy == destination_file:
